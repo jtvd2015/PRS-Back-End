@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
+using Utility;
 
 namespace PRSWebAppBackEndProject.Controllers
 {
@@ -15,7 +16,8 @@ namespace PRSWebAppBackEndProject.Controllers
 
         public ActionResult List()
         {
-            return Json(db.Products.ToList(), JsonRequestBehavior.AllowGet);
+            //return Json(db.Products.ToList(), JsonRequestBehavior.AllowGet);
+            return new JsonNetResult { Data = db.PurchaseRequests.ToList() };
         }
 
         // /Products/Get/5
@@ -30,7 +32,8 @@ namespace PRSWebAppBackEndProject.Controllers
             {
                 return Json(new JsonMessage("Failure", "Id is not found"), JsonRequestBehavior.AllowGet);
             }
-            return Json(product, JsonRequestBehavior.AllowGet);
+            //return Json(product, JsonRequestBehavior.AllowGet);
+            return new JsonNetResult { Data = db.PurchaseRequests.ToList() };
         }
 
         // /Products/Create [POST]
