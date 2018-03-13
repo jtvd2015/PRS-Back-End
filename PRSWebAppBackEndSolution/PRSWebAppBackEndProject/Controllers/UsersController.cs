@@ -12,19 +12,19 @@ namespace PRSWebAppBackEndProject.Controllers
 {
     public class UsersController : Controller
     {
-        private AppDbContext db = new AppDbContext();
+        private PrsDbContext db = new PrsDbContext();
 
-        //// return array with 0 or 1 user
-        //public ActionResult Login(string UserName, string Password)
-        //{
-        //    var users = db.Users.Where(u => u.UserName == UserName && u.Password == Password);
-        //    return Json(users.ToList(), JsonRequestBehavior.AllowGet);
-        //}
+        //login
+        public ActionResult Login(string UserName, string Password)
+        {
+            var users = db.Users.Where(u => u.UserName == UserName && u.Password == Password);
+            return Json(users.ToList(), JsonRequestBehavior.AllowGet);
+        }
 
         public ActionResult List()
         {
             //return Json(db.Users.ToList(), JsonRequestBehavior.AllowGet);
-            return new JsonNetResult { Data = db.PurchaseRequests.ToList() };
+            return new JsonNetResult { Data = db.Users.ToList() };
         }
 
         // /Users/Get/5
@@ -40,7 +40,7 @@ namespace PRSWebAppBackEndProject.Controllers
                 return Json(new JsonMessage("Failure", "Id is not found"), JsonRequestBehavior.AllowGet);
             }
             //return Json(user, JsonRequestBehavior.AllowGet);
-            return new JsonNetResult { Data = db.PurchaseRequests.ToList() };
+            return new JsonNetResult { Data = db.Users.ToList() };
         }
 
         // /Users/Create [POST]

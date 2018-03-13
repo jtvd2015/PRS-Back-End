@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -13,7 +14,15 @@ namespace PRSWebAppBackEndProject.Models
         public int ProductId { get; set; }
         [Required]
         public int Quantity { get; set; }
+        [Required]
+        public bool Active { get; set; }
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public DateTime DateCreated { get; set; }
+        public DateTime? DateUpdated { get; set; }
+        public int? UserId { get; set; }
 
+
+        [JsonIgnore]
         public virtual PurchaseRequests PurchaseRequests { get; set; }
         public virtual Products Products { get; set; }
 

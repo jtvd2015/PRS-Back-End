@@ -12,7 +12,7 @@ namespace PRSWebAppBackEndProject.Models
         public int Id { get; set; }
         [Index(IsUnique = true)] [Required] [MaxLength(30, ErrorMessage = "Max Length of Username field is 30 characters.")]
         public string UserName { get; set; }
-        [Index(IsUnique = true)] [Required] [MaxLength(30, ErrorMessage = "Max Length of Password field is 30 characters.")]
+        [Required] [MaxLength(30, ErrorMessage = "Max Length of Password field is 30 characters.")]
         public string Password { get; set; }
         [Required] [MaxLength(30, ErrorMessage = "Max Length of First Name field is 30 characters.")]
         public string FirstName { get; set; }

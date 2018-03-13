@@ -14,7 +14,7 @@ namespace PRSWebAppBackEndProject.Models
         public string VendorPartNumber { get; set; }
         [Required] [MaxLength(150, ErrorMessage = "Max Length of Name field is 150 characters.")]
         public string Name  { get; set; }
-        [Required] [DecimalPrecision(10, 2)]
+        [Required] [DecimalPrecision(10, 2)] [MinLength(0)]
         public decimal Price { get; set; }
         [Required]
         public string Unit { get; set; }
@@ -26,7 +26,7 @@ namespace PRSWebAppBackEndProject.Models
         public DateTime? DateUpdated { get; set; }
         public int? UserId { get; set; }
 
-        public virtual Vendors vendors { get; set; }
+        public virtual Vendors Vendors { get; set; }
 
         public Products()
         {

@@ -12,10 +12,17 @@ namespace PRSWebAppBackEndProject.Controllers
 {
     public class PurchaseRequestLineItemsController : Controller
     {
-        private AppDbContext db = new AppDbContext();
+        private PrsDbContext db = new PrsDbContext();
+
+        struct prliType {
+			public PurchaseRequests PurchaseRequest;
+			public IEnumerable<PurchaseRequestLineItems> PurchaseRequestLineItems;
+		}
 
         private void UpdatePurchaseRequestTotal(int prodid)
         {
+            db = new PrsDbContext();
+            
             decimal total = 0;
             var PurchaseRequestLineItems = db.PurchaseRequestLineItems.Where(p => p.PurchaseRequestId == prodid);
             foreach (var PurchaseRequestLineItem in PurchaseRequestLineItems)
@@ -31,7 +38,7 @@ namespace PRSWebAppBackEndProject.Controllers
         public ActionResult List()
         {
             //return Json(db.PurchaseRequestLineItems.ToList(), JsonRequestBehavior.AllowGet);
-            return new JsonNetResult { Data = db.PurchaseRequests.ToList() };
+            return new JsonNetResult { Data = db.PurchaseRequestLineItems.ToList() };
         }
 
         // /PurchaseRequestLineItems/Get/5
@@ -47,25 +54,26 @@ namespace PRSWebAppBackEndProject.Controllers
                 return Json(new JsonMessage("Failure", "Id is not found"), JsonRequestBehavior.AllowGet);
             }
             //return Json(PurchaseRequestLineItem, JsonRequestBehavior.AllowGet);
-            return new JsonNetResult { Data = db.PurchaseRequests.ToList() };
+            return new JsonNetResult { Data = db.PurchaseRequestLineItems.ToList() };
         }
 
         // /PurchaseRequestLineItems/Create [POST]
-        public ActionResult Create([FromBody] PurchaseRequestLineItems PurchaseRequestLineItem)
+        public ActionResult Create([FromBody] PurchaseRequestLineItems purchaseRequestLineItem)
         {
             if (!ModelState.IsValid)
             {
                 return Json(new JsonMessage("Failure", "ModelState is not valid"), JsonRequestBehavior.AllowGet);
             }
-            db.PurchaseRequestLineItems.Add(PurchaseRequestLineItem);
+            db.PurchaseRequestLineItems.Add(purchaseRequestLineItem);
             try
-            {
+            {                
                 db.SaveChanges();
+                UpdatePurchaseRequestTotal(purchaseRequestLineItem.PurchaseRequestId);
             }
             catch (Exception ex)
             {
                 return Json(new JsonMessage("Failure", ex.Message), JsonRequestBehavior.AllowGet);
-            }
+            }            
             return Json(new JsonMessage("Success", "Purchase Request Line Item was created"));
         }
 
@@ -85,6 +93,7 @@ namespace PRSWebAppBackEndProject.Controllers
             try
             {
                 db.SaveChanges();
+                UpdatePurchaseRequestTotal(purchaseRequestLineItem.PurchaseRequestId);
             }
             catch (Exception ex)
             {
@@ -101,6 +110,7 @@ namespace PRSWebAppBackEndProject.Controllers
             try
             {
                 db.SaveChanges();
+                UpdatePurchaseRequestTotal(purchaseRequestLineItem.PurchaseRequestId);
             }
             catch (Exception ex)
             {

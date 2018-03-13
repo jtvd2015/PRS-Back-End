@@ -7,13 +7,13 @@ namespace PRSWebAppBackEndProject.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AddedPurchaseRequestLineItemsAttributes : IMigrationMetadata
+    public sealed partial class Init : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedPurchaseRequestLineItemsAttributes));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Init));
         
         string IMigrationMetadata.Id
         {
-            get { return "201803121852597_Added PurchaseRequestLineItems Attributes []"; }
+            get { return "201803131850451_Init"; }
         }
         
         string IMigrationMetadata.Source

@@ -193,68 +193,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201803092149048_Init.cs" />
-    <Compile Include="Migrations\201803092149048_Init.Designer.cs">
-      <DependentUpon>201803092149048_Init.cs</DependentUpon>
+    <Compile Include="Migrations\201803131850451_Init.cs" />
+    <Compile Include="Migrations\201803131850451_Init.Designer.cs">
+      <DependentUpon>201803131850451_Init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201803121337424_Added Vendor Class.cs" />
-    <Compile Include="Migrations\201803121337424_Added Vendor Class.Designer.cs">
-      <DependentUpon>201803121337424_Added Vendor Class.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803121343258_Added Vendor Attributes [].cs" />
-    <Compile Include="Migrations\201803121343258_Added Vendor Attributes [].Designer.cs">
-      <DependentUpon>201803121343258_Added Vendor Attributes [].cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803121411509_Added VendorsController.cs" />
-    <Compile Include="Migrations\201803121411509_Added VendorsController.Designer.cs">
-      <DependentUpon>201803121411509_Added VendorsController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803121423376_Added Products Class.cs" />
-    <Compile Include="Migrations\201803121423376_Added Products Class.Designer.cs">
-      <DependentUpon>201803121423376_Added Products Class.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803121527205_Added Products Attributes [].cs" />
-    <Compile Include="Migrations\201803121527205_Added Products Attributes [].Designer.cs">
-      <DependentUpon>201803121527205_Added Products Attributes [].cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803121529432_Added Decimal Precision.cs" />
-    <Compile Include="Migrations\201803121529432_Added Decimal Precision.Designer.cs">
-      <DependentUpon>201803121529432_Added Decimal Precision.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803121554578_Added ProductsController.cs" />
-    <Compile Include="Migrations\201803121554578_Added ProductsController.Designer.cs">
-      <DependentUpon>201803121554578_Added ProductsController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803121617055_Added PurchaseRequest class.cs" />
-    <Compile Include="Migrations\201803121617055_Added PurchaseRequest class.Designer.cs">
-      <DependentUpon>201803121617055_Added PurchaseRequest class.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803121750062_Added Purchase Request Attributes [].cs" />
-    <Compile Include="Migrations\201803121750062_Added Purchase Request Attributes [].Designer.cs">
-      <DependentUpon>201803121750062_Added Purchase Request Attributes [].cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803121809160_Made Reason for Rejection nullable.cs" />
-    <Compile Include="Migrations\201803121809160_Made Reason for Rejection nullable.Designer.cs">
-      <DependentUpon>201803121809160_Made Reason for Rejection nullable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803121831306_Added Purchase Requests Controller.cs" />
-    <Compile Include="Migrations\201803121831306_Added Purchase Requests Controller.Designer.cs">
-      <DependentUpon>201803121831306_Added Purchase Requests Controller.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803121848056_Added PurchaseRequestLineItems Class.cs" />
-    <Compile Include="Migrations\201803121848056_Added PurchaseRequestLineItems Class.Designer.cs">
-      <DependentUpon>201803121848056_Added PurchaseRequestLineItems Class.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803121852597_Added PurchaseRequestLineItems Attributes [].cs" />
-    <Compile Include="Migrations\201803121852597_Added PurchaseRequestLineItems Attributes [].Designer.cs">
-      <DependentUpon>201803121852597_Added PurchaseRequestLineItems Attributes [].cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803121921125_purchaseRequests to PurchaseRequests.cs" />
-    <Compile Include="Migrations\201803121921125_purchaseRequests to PurchaseRequests.Designer.cs">
-      <DependentUpon>201803121921125_purchaseRequests to PurchaseRequests.cs</DependentUpon>
+    <Compile Include="Migrations\201803132004513_Added Active, DateCreated, DateUpdated, and UserId to PurchaseRequestLineItems Class.cs" />
+    <Compile Include="Migrations\201803132004513_Added Active, DateCreated, DateUpdated, and UserId to PurchaseRequestLineItems Class.Designer.cs">
+      <DependentUpon>201803132004513_Added Active, DateCreated, DateUpdated, and UserId to PurchaseRequestLineItems Class.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AppDbContext.cs" />
+    <Compile Include="Models\PrsDbContext.cs" />
     <Compile Include="Models\IndexAttribute.cs" />
     <Compile Include="Models\Products.cs" />
     <Compile Include="Models\PurchaseRequestLineItems.cs" />
@@ -339,50 +287,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803092149048_Init.resx">
-      <DependentUpon>201803092149048_Init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803131850451_Init.resx">
+      <DependentUpon>201803131850451_Init.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803121337424_Added Vendor Class.resx">
-      <DependentUpon>201803121337424_Added Vendor Class.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803121343258_Added Vendor Attributes [].resx">
-      <DependentUpon>201803121343258_Added Vendor Attributes [].cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803121411509_Added VendorsController.resx">
-      <DependentUpon>201803121411509_Added VendorsController.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803121423376_Added Products Class.resx">
-      <DependentUpon>201803121423376_Added Products Class.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803121527205_Added Products Attributes [].resx">
-      <DependentUpon>201803121527205_Added Products Attributes [].cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803121529432_Added Decimal Precision.resx">
-      <DependentUpon>201803121529432_Added Decimal Precision.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803121554578_Added ProductsController.resx">
-      <DependentUpon>201803121554578_Added ProductsController.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803121617055_Added PurchaseRequest class.resx">
-      <DependentUpon>201803121617055_Added PurchaseRequest class.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803121750062_Added Purchase Request Attributes [].resx">
-      <DependentUpon>201803121750062_Added Purchase Request Attributes [].cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803121809160_Made Reason for Rejection nullable.resx">
-      <DependentUpon>201803121809160_Made Reason for Rejection nullable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803121831306_Added Purchase Requests Controller.resx">
-      <DependentUpon>201803121831306_Added Purchase Requests Controller.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803121848056_Added PurchaseRequestLineItems Class.resx">
-      <DependentUpon>201803121848056_Added PurchaseRequestLineItems Class.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803121852597_Added PurchaseRequestLineItems Attributes [].resx">
-      <DependentUpon>201803121852597_Added PurchaseRequestLineItems Attributes [].cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803121921125_purchaseRequests to PurchaseRequests.resx">
-      <DependentUpon>201803121921125_purchaseRequests to PurchaseRequests.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803132004513_Added Active, DateCreated, DateUpdated, and UserId to PurchaseRequestLineItems Class.resx">
+      <DependentUpon>201803132004513_Added Active, DateCreated, DateUpdated, and UserId to PurchaseRequestLineItems Class.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

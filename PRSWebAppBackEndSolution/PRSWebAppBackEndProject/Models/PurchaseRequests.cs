@@ -32,6 +32,7 @@ namespace PRSWebAppBackEndProject.Models
         public int? UpdatedByUser { get; set; }
 
         public virtual Users users { get; set; }
+        public virtual PurchaseRequests purchaserequests { get; set; }
 
         public PurchaseRequests()
         {

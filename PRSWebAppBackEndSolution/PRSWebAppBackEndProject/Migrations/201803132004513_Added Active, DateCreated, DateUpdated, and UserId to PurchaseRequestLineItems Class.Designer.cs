@@ -7,13 +7,13 @@ namespace PRSWebAppBackEndProject.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AddedVendorClass : IMigrationMetadata
+    public sealed partial class AddedActiveDateCreatedDateUpdatedandUserIdtoPurchaseRequestLineItemsClass : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedVendorClass));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedActiveDateCreatedDateUpdatedandUserIdtoPurchaseRequestLineItemsClass));
         
         string IMigrationMetadata.Id
         {
-            get { return "201803121337424_Added Vendor Class"; }
+            get { return "201803132004513_Added Active, DateCreated, DateUpdated, and UserId to PurchaseRequestLineItems Class"; }
         }
         
         string IMigrationMetadata.Source

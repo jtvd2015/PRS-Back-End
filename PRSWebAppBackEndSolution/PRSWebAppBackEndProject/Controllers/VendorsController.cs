@@ -12,12 +12,12 @@ namespace PRSWebAppBackEndProject.Controllers
 {
     public class VendorsController : Controller
     {
-        private AppDbContext db = new AppDbContext();
+        private PrsDbContext db = new PrsDbContext();
 
         public ActionResult List()
         {
             //return Json(db.Vendors.ToList(), JsonRequestBehavior.AllowGet);
-            return new JsonNetResult { Data = db.PurchaseRequests.ToList() };
+            return new JsonNetResult { Data = db.Vendors.ToList() };
         }
 
         // /Vendors/Get/5
@@ -33,7 +33,7 @@ namespace PRSWebAppBackEndProject.Controllers
                 return Json(new JsonMessage("Failure", "Id is not found"), JsonRequestBehavior.AllowGet);
             }
             //return Json(vendor, JsonRequestBehavior.AllowGet);
-            return new JsonNetResult { Data = db.PurchaseRequests.ToList() };
+            return new JsonNetResult { Data = db.Vendors.ToList() };
         }
 
         // /Vendors/Create [POST]

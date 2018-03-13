@@ -6,9 +6,9 @@ using System.Web;
 
 namespace PRSWebAppBackEndProject.Models
 {
-    public class AppDbContext : DbContext
+    public class PrsDbContext : DbContext
     {
-        public AppDbContext() : base()  
+        public PrsDbContext() : base()  
         {
         }
 

@@ -12,7 +12,7 @@ namespace PRSWebAppBackEndProject.Controllers
 {
     public class PurchaseRequestsController : Controller
     {
-        private AppDbContext db = new AppDbContext();
+        private PrsDbContext db = new PrsDbContext();        
 
         public ActionResult GetForReview()
         {
