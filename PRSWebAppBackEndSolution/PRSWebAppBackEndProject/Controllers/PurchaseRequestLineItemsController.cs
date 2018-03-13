@@ -66,14 +66,14 @@ namespace PRSWebAppBackEndProject.Controllers
             }
             db.PurchaseRequestLineItems.Add(purchaseRequestLineItem);
             try
-            {                
+            {
                 db.SaveChanges();
-                UpdatePurchaseRequestTotal(purchaseRequestLineItem.PurchaseRequestId);
             }
             catch (Exception ex)
             {
                 return Json(new JsonMessage("Failure", ex.Message), JsonRequestBehavior.AllowGet);
-            }            
+            }
+            UpdatePurchaseRequestTotal(purchaseRequestLineItem.PurchaseRequestId);
             return Json(new JsonMessage("Success", "Purchase Request Line Item was created"));
         }
 
@@ -93,12 +93,12 @@ namespace PRSWebAppBackEndProject.Controllers
             try
             {
                 db.SaveChanges();
-                UpdatePurchaseRequestTotal(purchaseRequestLineItem.PurchaseRequestId);
             }
             catch (Exception ex)
             {
                 return Json(new JsonMessage("Failure", ex.Message), JsonRequestBehavior.AllowGet);
             }
+            UpdatePurchaseRequestTotal(purchaseRequestLineItem.PurchaseRequestId);
             return Json(new JsonMessage("Success", "Purchase Request Line Item was updated"));
         }
 
@@ -110,12 +110,12 @@ namespace PRSWebAppBackEndProject.Controllers
             try
             {
                 db.SaveChanges();
-                UpdatePurchaseRequestTotal(purchaseRequestLineItem.PurchaseRequestId);
             }
             catch (Exception ex)
             {
                 return Json(new JsonMessage("Failure", ex.Message), JsonRequestBehavior.AllowGet);
             }
+            UpdatePurchaseRequestTotal(purchaseRequestLineItem.PurchaseRequestId);
             return Json(new JsonMessage("Success", "Purchase Request Line Item was removed"));
         }
     }
